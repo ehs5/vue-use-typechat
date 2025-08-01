@@ -1,5 +1,4 @@
 # vue-use-typechat
-# vue-use-typechat
 [![npm](https://img.shields.io/npm/v/vue-use-typechat.svg)](https://www.npmjs.com/package/vue-use-typechat)
 >
 A lightweight Vue 3 composable for type-safe AI integrations using Microsoft's TypeChat.
