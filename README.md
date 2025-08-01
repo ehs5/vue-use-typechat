@@ -24,12 +24,13 @@ npm install vue-use-typechat
 ```
 
 
-## Warning
-You must not use the default OpenAI/Azure `TypeChatLanguageModel` that are provided by TypeChat, as that will expose your API key to the frontend.
-Rather, create your own model implementing the `TypeChatLanguageModel` interface that sends the request to your own backend and passes it to your preferred AI service.
-
-
 ## Example Usage
+> [!WARNING] 
+> You must not use the default OpenAI/Azure `TypeChatLanguageModel` that are provided by TypeChat, as that will expose your API key to the frontend.
+> 
+> Rather, create your own model implementing the `TypeChatLanguageModel` interface that sends the request to your own backend, passes it to your preferred AI service, and returns the contents back to the frontend.
+
+
 See the full example in `demo/Demo.vue`.  
 A minimal example:
 
