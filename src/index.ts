@@ -1,5 +1,5 @@
 import { ref, type Ref } from "vue"
-import { createJsonTranslator, type Result, type TypeChatJsonTranslator, type TypeChatLanguageModel } from "typechat"
+import { createJsonTranslator, PromptSection, type Result, type TypeChatJsonTranslator, type TypeChatLanguageModel } from "typechat"
 import { type TypeScriptJsonValidator } from "typechat/ts"
 
 export interface UseTypeChatOptions<T extends object> {
@@ -36,11 +36,11 @@ export function useTypeChat<T extends object>(options: UseTypeChatOptions<T>) {
    * Sends a prompt to the language model.
    * Both returns the specified type, and sets the returned type in the output ref.
    */
-  async function prompt(promptText: string): Promise<T | null> {
+  async function prompt(promptText: string, promptPreamble?: string | PromptSection[]): Promise<T | null> {
     processing.value = true
 
     try {
-      const result: Result<T> = await translator.translate(promptText)
+      const result: Result<T> = await translator.translate(promptText, promptPreamble)
       if (!result.success) throw new Error(result.message)
 
       output.value = result.data
