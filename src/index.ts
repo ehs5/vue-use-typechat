@@ -1,5 +1,5 @@
 import { ref, type Ref } from "vue"
-import { createJsonTranslator, PromptSection, type Result, type TypeChatJsonTranslator, type TypeChatLanguageModel } from "typechat"
+import { createJsonTranslator, type PromptSection, type Result, type TypeChatJsonTranslator, type TypeChatLanguageModel } from "typechat"
 import { type TypeScriptJsonValidator } from "typechat/ts"
 
 export interface UseTypeChatOptions<T extends object> {
