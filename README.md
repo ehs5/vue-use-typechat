@@ -49,7 +49,7 @@ const { prompt, output, error, processing } = useTypeChat({
 })
 
 const handleButtonClick = async () => {
-    // Sends a prompt to our backend proxy, which will then send it to the AI service and return the result with the correct type
+    // Sends a prompt to your backend proxy, which will then send it to the AI service and return the result with the correct type
     await prompt("Give me a list of a few random customers with funny names")
     console.log(output.value)
 }
